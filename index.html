@@ -110,17 +110,39 @@
     text-align:center;
   }
   .about p{
-    font-size: clamp(16px, 1.9vw, 20px);
-    line-height: 1.9;
+    font-size: clamp(9px, 2.3vw, 18px);
+    line-height: 1.85;
     color: var(--ink-soft);
+    white-space: nowrap;
   }
   .about p b{ color: var(--ink); }
+
+  .ig-link{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    margin-top:22px;
+    padding: 10px 20px;
+    border: 1.5px solid var(--ink);
+    border-radius: 999px;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    color: var(--ink);
+    text-decoration:none;
+    transition: background .2s ease, color .2s ease;
+  }
+  .ig-link:hover{
+    background: var(--ink);
+    color: var(--lime);
+  }
 
   /* ---------- FORM SECTION ---------- */
   .form-section{
     padding: 0 6vw 10vh;
     display:flex;
-    justify-content:center;
+    flex-direction: column;
+    align-items:center;
   }
 
   .form-card{
@@ -167,46 +189,6 @@
     display:block;
   }
 
-  /* ---------- SIZE TABLE ---------- */
-  .size-note{
-    max-width: 720px;
-    margin: 0 auto 10vh;
-    padding: 0 6vw;
-  }
-  .size-note details{
-    background: rgba(23,24,26,0.04);
-    border: 1px solid rgba(23,24,26,0.12);
-    border-radius: 4px;
-    padding: 18px 22px;
-  }
-  .size-note summary{
-    cursor:pointer;
-    font-weight:700;
-    font-size:14px;
-    letter-spacing:0.02em;
-  }
-  table.size-table{
-    width:100%;
-    border-collapse: collapse;
-    margin-top:16px;
-    font-size:14px;
-  }
-  table.size-table th, table.size-table td{
-    border:1px solid rgba(23,24,26,0.15);
-    padding:8px 10px;
-    text-align:center;
-  }
-  table.size-table th{
-    background: var(--lime);
-    font-weight:700;
-  }
-  .size-note .caveat{
-    margin-top:10px;
-    font-size:12px;
-    color: var(--sub);
-    font-style: italic;
-  }
-
   /* ---------- FOOTER ---------- */
   footer{
     text-align:center;
@@ -242,17 +224,21 @@
 
 <section class="about">
   <p>
-    這是 ABC-MART 與 OffTrack Crew（OTC）首次跨界合作，<br/>
-    由 OTC 專業教練團規劃並帶領一場結合肌力訓練與跑步的 <b>Hybrid Training</b> 課程。<br/>
-    誠摯邀請夥伴們共同參與，實地體驗專業體能訓練。
+    這是 ABC-MART 與 OffTrack Crew 首次跨界合作<br/>
+    由 OTC 專業教練團規劃結合肌力訓練與跑步的 <b>Hybrid Training</b><br/>
+    誠摯邀請夥伴們共同參與，實地體驗專業體能訓練
   </p>
+  <a class="ig-link" href="https://www.instagram.com/offtrack_crew/" target="_blank" rel="noopener">
+    <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.4" cy="6.6" r="1"/></svg>
+    認識 OTC　@offtrack_crew
+  </a>
 </section>
 
 <section class="form-section">
   <div class="form-card">
     <div class="form-card-head">
       <h2>立即報名</h2>
-      <p>請填寫以下表單完成報名，我們會統一協調服飾尺碼與後續通知。</p>
+      <p>請填寫以下表單完成報名，我們會統一協調服飾尺碼與後續通知。<br/>填寫前請詳讀表單內之報名須知。</p>
     </div>
     <iframe class="gform"
       src="https://docs.google.com/forms/d/e/1FAIpQLSeXRx46Q94wzpXm8N5uK82eNn47lKS_fMYBiu0EjJyXIS0CWQ/viewform?embedded=true">
@@ -261,26 +247,8 @@
   </div>
 </section>
 
-<section class="size-note">
-  <details>
-    <summary>服飾尺寸對照表（參考用）</summary>
-    <table class="size-table">
-      <thead>
-        <tr><th>尺寸</th><th>寬度 (CM)</th><th>長度 (CM)</th></tr>
-      </thead>
-      <tbody>
-        <tr><td>S</td><td>51.5</td><td>64</td></tr>
-        <tr><td>M</td><td>54.5</td><td>67</td></tr>
-        <tr><td>L</td><td>55.5</td><td>69</td></tr>
-        <tr><td>XL</td><td>56.5</td><td>73</td></tr>
-      </tbody>
-    </table>
-    <p class="caveat">＊ 此表為 OTC 既有款式尺寸，僅供參考，實際款式尺寸依 OTC 確認為準</p>
-  </details>
-</section>
-
 <footer>
-  HYBRID TRAINING — ABC-MART × OTC　｜　如有問題請洽活動窗口
+  HYBRID TRAINING — ABC-MART × OTC
 </footer>
 
 
